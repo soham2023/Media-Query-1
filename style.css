@@ -1,0 +1,135 @@
+body
+{
+
+    background-color: aqua;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.mobile , .tablet , .laptop , .bigScreen
+{
+    display: none;
+}
+
+.demo
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+@media screen and (min-width: 0px) and (max-width: 425px) 
+{
+    body
+    {
+        background-color: rgb(115, 11, 11);
+    }    
+    body::after
+    {
+        content: 'Screen size 425px';
+        font-size: 40px;
+    }
+    .demo , .tablet , .laptop , .bigScreen
+    {
+        display: none;
+    }
+    .mobile
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) 
+{
+    body
+    {
+        background-color: aqua;
+    }    
+    body::after
+    {
+        content: 'Screen size 768px';
+        font-size: 40px;
+    }
+    .demo , .laptop , .bigScreen , .mobile
+    {
+        display: none;
+    }
+    .tablet
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) 
+{
+    body
+    {
+        background-color: rgb(251, 194, 5);
+    }    
+    body::after
+    {
+        content: 'Screen size 1024px';
+        font-size: 40px;
+    }
+    .demo , .bigScreen , .mobile , .tablet
+    {
+        display: none;
+    }
+    .laptop
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px)
+{
+    body
+    {
+        background-color: rgb(5, 251, 38);
+    }    
+    body::after
+    {
+        content: 'Screen size 1440px';
+        font-size: 40px;
+    }
+    .demo , .mobile , .tablet , .laptop
+    {
+        display: none;
+    }
+    .laptop
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1440px) 
+{
+    body
+    {
+        background-color: rgb(5, 169, 251);
+    }    
+    body::after
+    {
+        content: 'Screen size above 1440px';
+        font-size: 40px;
+    }
+    .bigScreen , .mobile , .tablet, .laptop
+    {
+        display: none;
+    }
+    .demo
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
